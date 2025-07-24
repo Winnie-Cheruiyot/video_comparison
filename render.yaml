@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: video-frame-comparison
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run video_frame_compare.py --server.port=10000 --server.enableCORS=false
